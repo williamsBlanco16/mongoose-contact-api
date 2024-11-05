@@ -1,2 +1,25 @@
+# Ignore build and output files
+dist/
+build/
+
+# Ignore IDE-specific configuration files
+.vscode/
+.idea/
+
+# Ignore TypeScript-generated files
+*.tsbuildinfo
+
+# Ignore cache files
+.cache/
+*.log
+
+# Ignore test-specific dependencies
+coverage/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+.env.local
 .env
-.env.*
+node_modules/

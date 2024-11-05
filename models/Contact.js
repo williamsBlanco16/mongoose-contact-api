@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
-const topicSchema = new mongoose.Schema({
-  topic: { type: String, required: true },
-  value: { type: Number, required: true },
+const providerSchema = new mongoose.Schema({
+  provider: { type: String, required: true },
+  scores: { type: Object, required: true }
 });
 
 const contactSchema = new mongoose.Schema({
@@ -13,7 +13,8 @@ const contactSchema = new mongoose.Schema({
   extra: { type: String, required: true },
   company: { type: String, required: true },
   consent: { type: Boolean, required: true },
-  topics: { type: [topicSchema], default: [] }
+  topicsSelected: { type: [String], required: true },
+  bestProviders: { type: [providerSchema], required: false }
 });
 
 const Contact = mongoose.model('Contact', contactSchema);
