@@ -13,6 +13,7 @@ const contactSchema = new mongoose.Schema({
   extra: { type: String, required: true },
   company: { type: String, required: true },
   consent: { type: Boolean, required: true },
+  marketingConsent: {type: Boolean, required: false },
   topicsSelected: { type: [String], required: true },
   bestProviders: { type: [providerSchema], required: false }
 });
