@@ -3,7 +3,7 @@ import { Client } from "@hubspot/api-client";
 
 exports.createContact = async (req, res) => {
   try {
-    const hubspotApiKey = process.env['API-KEY-HUBSPOT'];
+    const hubspotApiKey = process.env['API_KEY_HUBSPOT'];
     if (!hubspotApiKey) {
       return res.status(500).json({ message: 'API Key de HubSpot no configurada' });
     }
