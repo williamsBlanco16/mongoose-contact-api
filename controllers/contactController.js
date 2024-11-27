@@ -23,8 +23,8 @@ exports.createContact = async (req, res) => {
         extra: contact.extra,
         consent: contact.consent,
         gdpr: contact.marketingConsent,
-        topics: contact.topicsSelected,
-        result: contact.bestProviders || ''
+        topics: contact.topicsSelected.join(', '),
+        result: contact.bestProviders ? JSON.stringify(contact.bestProviders) : '',
       }
     };
 
