@@ -1,5 +1,5 @@
 const Contact = require('../models/Contact');
-import { Client } from "@hubspot/api-client";
+const { Client } = require("@hubspot/api-client");
 
 exports.createContact = async (req, res) => {
   try {
